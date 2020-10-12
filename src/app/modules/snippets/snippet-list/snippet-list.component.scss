@@ -1,0 +1,30 @@
+.snippet {
+  overflow: hidden;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(#000, .3);
+
+  &__header {
+
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__content {
+
+  }
+
+  &__footer {
+    opacity: .7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__date {
+    display: block;
+  }
+}
