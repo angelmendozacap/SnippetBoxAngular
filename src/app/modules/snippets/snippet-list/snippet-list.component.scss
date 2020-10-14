@@ -1,8 +1,15 @@
+.snippets {
+  display: grid;
+  row-gap: 1rem;
+}
+
 .snippet {
   overflow: hidden;
   border-radius: .5rem;
   padding: 1.5rem;
-  box-shadow: 0 5px 20px rgba(#000, .3);
+  box-shadow: 0 0 5px rgba(#000, .3);
+  display: grid;
+  row-gap: .5rem;
 
   &__header {
 
@@ -10,6 +17,7 @@
 
   &__title {
     margin: 0;
+    margin-bottom: .25rem;
   }
 
   &__content {

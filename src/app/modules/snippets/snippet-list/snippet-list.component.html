@@ -1,22 +1,22 @@
 <div class="container">
-  <article class="snippet" *ngFor="let snippet of snippets">
-    <header class="snippet__header">
-      <h3 class="snippet__title">{{snippet.title}}</h3>
+  <section class="snippets">
+    <article class="snippet" *ngFor="let snippet of snippets">
+      <header class="snippet__header">
+        <h3 class="snippet__title">{{snippet.title}}</h3>
 
-      <div>
-        <a href="mailto:{{snippet.user.email}}">{{snippet.user.name}}</a>
+        <div>
+          <a href="mailto:{{snippet.user.email}}">{{snippet.user.name}}</a>
+        </div>
+      </header>
+
+      <div class="snippet__body">
+        <div [innerHTML]="snippet.content"></div>
       </div>
-    </header>
 
-    <div class="snippet__body">
-      <pre>
-        <code class="snippet__content" [innerHTML]="snippet.content"></code>
-      </pre>
-    </div>
-
-    <footer class="snippet__footer">
-      <time class="snippet__date">Created: {{snippet.created_at}}</time>
-      <time class="snippet__date">Expires: {{snippet.expires_at}}</time>
-    </footer>
-  </article>
+      <footer class="snippet__footer">
+        <time class="snippet__date">Created: {{snippet.created_at}}</time>
+        <time class="snippet__date">Expires: {{snippet.expires_at}}</time>
+      </footer>
+    </article>
+  </section>
 </div>
