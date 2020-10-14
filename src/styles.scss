@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --heading-f: 'Righteous', cursive;
+  --body-f: 'Nunito', sans-serif;
+}
+
+body {
+  font-family: var(--body-f);
+}
+
 .container {
   width: 70%;
   max-width: 1200px;

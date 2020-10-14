@@ -14,21 +14,10 @@ export class SnippetListComponent implements OnInit {
   constructor(private service: SnippetsService) { }
 
   ngOnInit() {
-    /* this.service.getAll().subscribe(data => {
-      console.log('data', data)
-      this.snippets = data
-    }) */
-
-    this.snippets = [
-      {
-        id: 1,
-        user_id: 1,
-        title: 'One Title',
-        content: '<h2>Content Title</h2><p>i dont\'t know what\'s going on</p>',
-        expires_at: '2020-12-12',
-        created_at: '2020-12-12',
-      }
-    ]
+    this.service.getAll().subscribe(response => {
+      console.table(response.data)
+      this.snippets = response.data as Snippet[]
+    })
   }
 
 }
